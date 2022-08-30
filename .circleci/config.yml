@@ -12,11 +12,10 @@ jobs:
       - run:
           name: Deploy
           command: |
-            ssh -o StrictHostKeyChecking=no ubuntu@54.88.33.102 \
+            ssh -o StrictHostKeyChecking=no ubuntu@35.175.203.152 \
             "echo Start deploy && \
             cd ~/sachin-app && \
             git pull origin master && \ 
-            cd .. && \
             sudo docker compose up --build -d && \
             echo Deploy end"
 workflows:
